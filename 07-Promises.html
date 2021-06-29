@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-Promises.html</title>
+</head>
+<body>
+    <script>
+        function pegarTemperatura() {
+            return new Promise(function (resolve, reject) {
+                console.log('Consultando temperatura...');
+
+                setTimeout(function() {
+                    resolve('40 na sombra');
+                }, 2000);
+            });
+        }
+
+        // 3 resultado possiveis:
+        //      pendente, ou seja, estou esperando
+        //      finalizado, deu tudo certo
+        //      rejeitado, aconteceu algum problema
+
+        // Usando a promise
+        let temp = pegarTemperatura();
+        // console.log(temp);
+        
+        // Quando deu tudo certo: callback. mecanismo de qdo der tudo certo
+        temp.then(function(resultado) {
+           console.log('Temperatura: ' + resultado); 
+        });
+        
+        // Quando deu tudo errado: outro callback
+        temp.catch(function(error){
+            console.log("Eita, deu erro!");
+        });
+        
+        </script>
+
+    <pre>
+        function pegarTemperatura() {
+            return new Promise(function (resolve, reject) {
+                console.log('Consultando temperatura...');
+
+                setTimeout(function() {
+                    resolve('40 na sombra');
+                }, 2000);
+            });
+        }
+
+        // 3 resultado possiveis:
+        //      pendente, ou seja, estou esperando
+        //      finalizado, deu tudo certo
+        //      rejeitado, aconteceu algum problema
+
+        // Usando a promise
+        let temp = pegarTemperatura();
+        // console.log(temp);
+        
+        // Quando deu tudo certo: callback. mecanismo de qdo der tudo certo
+        temp.then(function(resultado) {
+           console.log('Temperatura: ' + resultado); 
+        });
+        
+        // Quando deu tudo errado: outro callback
+        temp.catch(function(error){
+            console.log("Eita, deu erro!");
+        });
+        
+    </pre>
+</body>
+</html>

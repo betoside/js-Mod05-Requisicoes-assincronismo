@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-JSON.stringify.html</title>
+</head>
+<body>
+    <script>
+        
+        var_objeto = { nome: "betao", idade: 40, altura: 1.84, peso: 85 };
+        
+        var_string = '{ "nome": "betao", "idade": 40, "altura": 1.84, "peso": 85 }';
+        
+        nova_string = JSON.stringify(var_objeto);
+
+        // console.log(nova_string);
+
+        // exemplo: autocomplete do google
+        let busca = { inputUser: 'sk'};
+        let buscaString = JSON.stringify(busca);
+        let resultado = {
+            lista: [
+                'skate', 
+                'skateboard',
+                'sk8'
+            ]
+        }
+        // o google envia
+        respostaGoogle = JSON.stringify(resultado);
+        // console.log( respostaGoogle );
+
+        let recebiResultadoJson = JSON.parse(respostaGoogle);
+        console.log(recebiResultadoJson);
+    </script>
+
+    <pre>
+        
+        var_objeto = { nome: "betao", idade: 40, altura: 1.84, peso: 85 };
+        
+        var_string = '{ "nome": "betao", "idade": 40, "altura": 1.84, "peso": 85 }';
+        
+        nova_string = JSON.stringify(var_objeto);
+
+        // console.log(nova_string);
+
+        // exemplo: autocomplete do google
+        let busca = { inputUser: 'sk'};
+        let buscaString = JSON.stringify(busca);
+        let resultado = {
+            lista: [
+                'skate', 
+                'skateboard',
+                'sk8'
+            ]
+        }
+        // o google envia
+        respostaGoogle = JSON.stringify(resultado);
+        // console.log( respostaGoogle );
+
+        let recebiResultadoJson = JSON.parse(respostaGoogle);
+        console.log(recebiResultadoJson);
+    </pre>
+</body>
+</html>

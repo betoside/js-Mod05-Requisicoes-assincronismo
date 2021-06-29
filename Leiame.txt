@@ -1,0 +1,45 @@
+Módulo 5: Requisições e assíncronismo
+
+    js-Mod05-Requisicoes-assincronismo
+
+01-O que são requisições?
+02-O que é JSON
+    02-JSON.htlm
+
+03-JSON.parse
+    03-JSON.parse.html
+
+04-JSON.stringify
+    04-JSON.stringify.html
+
+05-Código síncrono vs assíncrono
+    05-sincrono-assincrono
+
+06-Callbacks
+    06-Callbacks
+
+07-Promises
+    07-Promises.html
+
+08-Fetch 1
+    08-Fetch-1.html
+    https://jsonplaceholder.typicode.com/posts
+
+09-Fetch 2
+    09-Fetch-2.html
+
+10-Async e Await
+    10-Async-Await.html
+
+11-Fetch com POST
+    11-Fetch-POST.html
+
+12-Upload de arquivos com JS
+    12-Upload-com-JS.html
+
+13-Thumbnails com JS
+    13-Thumbnails-JS.html
+
+14-Thumbnails com FileReader
+    14-Thumbnails-FileReader.html
+

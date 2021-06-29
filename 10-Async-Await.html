@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-Async-Await.html</title>
+</head>
+<body>
+    <script>
+        // let loadPosts2 = async () => {
+        // };
+
+        async function loadPosts() {
+            document.getElementById('posts').innerHTML = "carregando...";
+
+            let req = await fetch('https://jsonplaceholder.typicode.com/posts');
+            let json = await req.json();
+            montarBlog(json);
+
+        }
+
+        function montarBlog(lista) {
+            let html = '';
+
+            for(i in lista) {
+                html += '<h3>' + lista[i].title + '</h3>';
+                html += lista[i].body + '<br>';
+                html += '<hr>';
+            }
+
+            document.getElementById('posts').innerHTML = html;
+        }
+    
+    </script>
+
+    <div>
+        <button onclick="loadPosts();" >Carregar posts</button>
+
+        <div id="posts">
+            Vamos exibir a qtd de posts.
+        </div>
+    </div>
+
+    <pre>
+
+        async function loadPosts() {
+            document.getElementById('posts').innerHTML = "carregando...";
+
+            let req = await fetch('https://jsonplaceholder.typicode.com/posts', {} );
+            let json = await req.json();
+            montarBlog(json);
+
+        }
+
+        function montarBlog(lista) {
+            let html = '';
+
+            for(i in lista) {
+                html += '<h3>' + lista[i].title + '</h3>';
+                html += lista[i].body + '<br>';
+                html += '<hr>';
+            }
+
+            document.getElementById('posts').innerHTML = html;
+        }
+        
+    </pre>
+</body>
+</html>
